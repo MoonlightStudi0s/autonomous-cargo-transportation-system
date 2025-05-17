@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление краном</title>
+    <script src="/static/control.js"></script>
+</head>
+<body>
+    <h1>Управление краном</h1>
+    <div class="status">
+        Магнит: <span id="magnet-status">{{ 'Включен' if crane.magnet_active else 'Выключен' }}</span>
+    </div>
+    <div class="controls">
+        <button onclick="controlCrane('up')">Вверх (W)</button>
+        <button onclick="controlCrane('down')">Вниз (S)</button>
+        <button onclick="controlCrane('left')">Влево (A)</button>
+        <button onclick="controlCrane('right')">Вправо (D)</button>
+        <button onclick="controlCrane('toggle_magnet')">Магнит (X)</button>
+    </div>
+    <div class="video">
+        <img src="/crane_video1" alt="Камера крана">
+    </div>
+    <a href="/select_device">Назад</a>
+</body>
+</html>

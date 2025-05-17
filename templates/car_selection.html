@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор машинки</title>
+</head>
+<body>
+    <h1>Выберите машинку</h1>
+    {% for car in cars %}
+        <a href="/select_car/{{ car.number }}">Машинка {{ car.number }}</a><br>
+    {% endfor %}
+    <a href="/">Назад</a>
+</body>
+</html>

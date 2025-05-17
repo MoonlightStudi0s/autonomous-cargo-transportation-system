@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление машинкой {{ car_number }}</title>
+    <script src="/static/control.js"></script>
+</head>
+<body>
+    <h1>Управление машинкой {{ car_number }}</h1>
+    <div class="controls">
+        <button onclick="controlCar('forward')">Вперед (W)</button>
+        <button onclick="controlCar('backward')">Назад (S)</button>
+        <button onclick="controlCar('left')">Влево (A)</button>
+        <button onclick="controlCar('right')">Вправо (D)</button>
+        <button onclick="controlCar('stop')">Стоп (Space)</button>
+    </div>
+    <div class="video">
+        <img src="/car_video{{ car_number }}" alt="Камера машинки">
+    </div>
+    <a href="/select_device">Назад</a>
+</body>
+</html>
