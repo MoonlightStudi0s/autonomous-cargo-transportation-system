@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление устройствами</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="auth-container">
+        <div class="auth-box">
+            <h1>Авторизация</h1>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Логин" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container hidden" id="device-select-container">
+        <div class="selection-box">
+            <h1>Выберите устройство</h1>
+            <div class="device-options">
+                <button class="device-btn" id="crane-btn">
+                    <img src="crane-icon.png" alt="Кран">
+                    <span>Кран</span>
+                </button>
+                <button class="device-btn" id="car-btn">
+                    <img src="car-icon.png" alt="Машина">
+                    <span>Машина</span>
+                </button>
+            </div>
+            <button class="back-btn" id="back-to-auth">Назад</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="car-select-container">
+        <div class="selection-box">
+            <h1>Выберите машинку</h1>
+            <div class="car-options">
+                <button class="car-btn" data-car="1">Машинка 1</button>
+                <button class="car-btn" data-car="2">Машинка 2</button>
+                <button class="car-btn" data-car="3">Машинка 3</button>
+                <button class="car-btn" data-car="4">Машинка 4</button>
+            </div>
+            <button class="back-btn" id="back-to-device">Назад</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="crane-control-container">
+        <div class="control-box">
+            <h1>Управление краном</h1>
+
+            <div class="status-display">
+                <div class="status-item">
+                    <span>Магнит:</span>
+                    <span id="magnet-status">Выключен</span>
+                </div>
+            </div>
+
+            <div class="control-panel">
+                <div class="movement-controls">
+                    <button class="control-btn" id="crane-up">↑ (R)</button>
+                    <div class="horizontal-controls">
+                        <button class="control-btn" id="crane-left">← (A)</button>
+                        <button class="control-btn" id="crane-down">↓ (F)</button>
+                        <button class="control-btn" id="crane-right">→ (D)</button>
+                    </div>
+                </div>
+
+                <div class="special-controls">
+                    <button class="control-btn magnet-btn" id="toggle-magnet">Магнит (X)</button>
+                </div>
+            </div>
+
+            <button class="back-btn" id="crane-back">Назад</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="car-control-container">
+        <div class="control-box">
+            <h1>Управление машинкой <span id="car-number"></span></h1>
+
+            <div class="control-panel">
+                <div class="movement-controls">
+                    <button class="control-btn" id="car-forward">↑ (W)</button>
+                    <div class="horizontal-controls">
+                        <button class="control-btn" id="car-left">← (A)</button>
+                        <button class="control-btn" id="car-stop">Стоп (S)</button>
+                        <button class="control-btn" id="car-right">→ (D)</button>
+                    </div>
+                    <button class="control-btn" id="car-backward">↓ (Z)</button>
+                </div>
+            </div>
+
+            <button class="back-btn" id="car-back">Назад</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
